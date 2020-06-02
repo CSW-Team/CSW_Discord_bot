@@ -2,7 +2,7 @@ import discord
 
 client = discord.Client()
 
-token="token"
+token="NzE2MTY5NTYyMjYxMDI4OTA1.XtYM3g.loM5FOZzpK1uxRHXNgnrj0T2b1g"
 
 @client.event
 async def on_ready():
