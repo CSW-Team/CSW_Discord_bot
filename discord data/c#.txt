@@ -1,0 +1,16 @@
+```c
+using System;
+using System.Collections.Generic;
+using System.Linq;\nusing System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World");
+        }
+    }
+}```

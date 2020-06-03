@@ -1,8 +1,12 @@
 import discord
 
+def gotest(list1):
+    j = ""
+    for i in range(len(list1)):
+        j = j + list1[i]
+    return j
 client = discord.Client()
-
-token="NzE2MTY5NTYyMjYxMDI4OTA1.XtYM3g.loM5FOZzpK1uxRHXNgnrj0T2b1g"
+token="your_token"
 
 @client.event
 async def on_ready():
@@ -14,22 +18,42 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("!hello"):
-        await message.channel.send('```diff\n-Hello\n-I am Hello World Bot\n-I will tell you how to make hello world program\n-If you do not how to use me, send me -help```')
+        j = ""
+        f = open('discord data/hello.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     if message.content.startswith("!help"):
-        await message.channel.send("```diff\n-Write '!' + programming language that you want\n-I can tell you everything on this list\n-python\n-java\n-c/c++\n-c#\n-html\n-go```")
+        f = open('discord data/help.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     if message.content.startswith("!python"):
-        await message.channel.send('```python\nprint("Hello World")```')
+        f = open('discord data/python.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     if message.content.startswith("!java"):
-        await message.channel.send('```java\npublic class HelloWorld {\n    public static void main(String args[]) {\n        System.out.println("Hello World");\n    }\n}```')
+        f = open('discord data/java.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     if message.content.startswith("!html"):
-        await message.channel.send('```html\n<html>\n  <body>\n    hello world!\n  </body>\n</html>```')
+        f = open('discord data/html.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     if message.content.startswith("!c++"):
-        await message.channel.send('```c++\n#include <iostream>\n\nusing namespace std;\n\ni8nt main()\n{\n	cout << "Hello World" << endl;\n	return 0;\n}```')
+        f = open('discord data/c++.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     elif message.content.startswith("!c#"):
-        await message.channel.send('```c\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n\nnamespace ConsoleApp1\n{\n    class Program\n    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine("Hello World");\n        }\n    }\n}```')
+        f = open('discord data/c#.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     elif message.content.startswith("!c"):
-        await message.channel.send('```c\n#include <stdio.h>\n\nint main()\n{\n    printf("Hello, world!");\n\n    return 0;\n}```')
+        f = open('discord data/c.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
     if message.content.startswith("!go"):
-        await message.channel.send('```go\npackage main\n\nimport "fmt"\n\nfunc main()\n{\n	fmt.Println("Hello, World")\n}```')
+        f = open('discord data/go.txt','r')
+        h = f.readlines()
+        await message.channel.send(gotest(h))
         
 client.run(token)
+f.close
