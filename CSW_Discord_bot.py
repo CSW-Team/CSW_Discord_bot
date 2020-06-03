@@ -56,4 +56,4 @@ async def on_message(message):
         await message.channel.send(gotest(h))
         
 client.run(token)
-f.close
+f.close()
