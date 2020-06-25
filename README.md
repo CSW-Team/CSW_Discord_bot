@@ -11,3 +11,7 @@
 5. Click F5 or Run Module
 6. Go to the your discord server
 7. Enjoy this programming
+
+if you want add your discord server add bot
+
+https://discord.com/oauth2/authorize?client_id=716169562261028905&scope=bot
